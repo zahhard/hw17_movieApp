@@ -8,5 +8,14 @@
         android:id="@+id/showAllFragment"
         android:name="ui.showAll.ShowAllFragment"
         android:label="fragment_show_all"
-        tools:layout="@layout/fragment_show_all" />
+        tools:layout="@layout/fragment_show_all" >
+        <action
+            android:id="@+id/action_showAllFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>
