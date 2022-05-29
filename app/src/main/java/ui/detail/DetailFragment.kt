@@ -43,6 +43,7 @@ class DetailFragment : Fragment() {
         detailViewModel.filmLiveData.observe(viewLifecycleOwner) {
             binding.tvOverView.text = it.overview
             binding.textViewName.text = it.filmName
+            binding.ratingBar2.rating = (it.voteAverage/2).toFloat()
 
             setImage(it.imgSrcUrl, binding.imageViewPoster)
             setImage(it.backgroundImgUrl, binding.imageViewBacground)
